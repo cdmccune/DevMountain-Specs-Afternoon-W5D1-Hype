@@ -18,11 +18,11 @@ struct HypeStrings {
 class Hype {
 
     var body: String
-    var timstamp: Date
+    var timestamp: Date
     
     init(body: String, timestamp: Date = Date()) {
         self.body = body
-        self.timstamp = timestamp
+        self.timestamp = timestamp
     }
 }
 
@@ -50,7 +50,7 @@ extension CKRecord {
 //        self.setValue(hype.timstamp, forKey: HypeStrings.timestamp)
         self.setValuesForKeys([
             HypeStrings.bodyKey : hype.body,
-            HypeStrings.timestamp : hype.timstamp
+            HypeStrings.timestamp : hype.timestamp
         ])
     }
 }

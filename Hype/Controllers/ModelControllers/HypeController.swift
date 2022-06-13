@@ -31,7 +31,7 @@ class HypeController {
         publicDB.save(hypeRecord) { record, error in
             //handle errpr
             if let error = error {
-                print("error in\(#function) : \(error.localizedDescription), \(error)")
+                print("error in \(#function) : \(error.localizedDescription), \(error)")
                 completion(false)
                 return
             }
@@ -51,8 +51,7 @@ class HypeController {
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: HypeStrings.recordTypeKey, predicate: predicate)
         
-//        publicDB.perform(query, inZoneWith: <#T##CKRecordZone.ID?#>, completionHandler: <#T##([CKRecord]?, Error?) -> Void#>)
-        
+    var toAddHypeList: [Hype] = []
         
         publicDB.fetch(withQuery: query) { result in
             switch result {
@@ -62,7 +61,7 @@ class HypeController {
                     case .success(let record):
                         print("fetched hype")
                         if let hype = Hype(ckRecord: record) {
-                            self.hypes.append(hype)
+                            toAddHypeList.append(hype)
                             return completion(true)
                         } else {
                             return completion(false)
@@ -73,6 +72,7 @@ class HypeController {
                         return completion(false)
                     }
                 }
+                self.hypes = toAddHypeList
             case .failure(let error):
                 print(error)
                 return completion(false)

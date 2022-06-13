@@ -16,6 +16,7 @@
 		245837032857AEFF008C2204 /* Hype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245837022857AEFF008C2204 /* Hype.swift */; };
 		245837062857B246008C2204 /* HypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245837052857B246008C2204 /* HypeController.swift */; };
 		2458370D2857BFF7008C2204 /* HypeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458370C2857BFF6008C2204 /* HypeListViewController.swift */; };
+		2458370F2857D552008C2204 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458370E2857D552008C2204 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		245837022857AEFF008C2204 /* Hype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hype.swift; sourceTree = "<group>"; };
 		245837052857B246008C2204 /* HypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeController.swift; sourceTree = "<group>"; };
 		2458370C2857BFF6008C2204 /* HypeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeListViewController.swift; sourceTree = "<group>"; };
+		2458370E2857D552008C2204 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				245837082857B3D0008C2204 /* ModelControllers */,
 				2458370B2857BF90008C2204 /* ViewControllers */,
+				245837102857D559008C2204 /* Helpers+Extensions */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -141,6 +144,14 @@
 				2458370C2857BFF6008C2204 /* HypeListViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		245837102857D559008C2204 /* Helpers+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2458370E2857D552008C2204 /* DateExtension.swift */,
+			);
+			path = "Helpers+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				245836E82857ADD9008C2204 /* AppDelegate.swift in Sources */,
+				2458370F2857D552008C2204 /* DateExtension.swift in Sources */,
 				245837062857B246008C2204 /* HypeController.swift in Sources */,
 				2458370D2857BFF7008C2204 /* HypeListViewController.swift in Sources */,
 				245836EA2857ADD9008C2204 /* SceneDelegate.swift in Sources */,
@@ -379,7 +391,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CurtMcCune.Hype;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Demo.Hype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -408,7 +420,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CurtMcCune.Hype;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Demo.Hype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
